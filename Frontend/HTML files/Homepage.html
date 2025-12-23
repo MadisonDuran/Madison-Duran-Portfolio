@@ -7,37 +7,150 @@
         <title>Madison Duran | AI Full-Stack Engineer</title>
     </head>
     <body>
-      <!-- Top header/Nav bar -->
-      <header>
-        <p><strong>Madison Duran | AI Full-Stack Engineer</strong></p>
-      <nav>
-        <ul>
-            <li class="linked__page"><a href="Homepage.html">Home</a></li>
-            <li class="linked__page"><a href="About.html">About</a></li>
-            <li class="linked__page"><a href="Projects.html">Projects</a></li>
-            <li class="linked__page"><a href="Experience.html">Experience</a></li>
-            <li class="linked__page"><a href="Contact.html">Contact</a></li>
-        </ul>
-      </nav>
-      <img src="/DSC06435.JPG" alt="Madison Duran Image" height="220">
+        <!-- Navigation Bar -->
+        <header>
+            <div class="header-content">
+                <p><strong>Madison Duran | AI Full-Stack Engineer</strong></p>
+                <nav>
+                    <ul>
+                        <li class="linked__page"><a href="Homepage.html">Home</a></li>
+                        <li class="linked__page"><a href="Projects.html">Projects</a></li>
+                        <li class="linked__page"><a href="Experience.html">Work Experience</a></li>
+                        <li class="linked__page"><a href="Resources.html">Learning Resources</a></li>
+                        <li class="linked__page"><a href="Contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <div class="hero-image">
+                    <img src="/DSC06435.JPG" alt="Madison Duran" height="220">
+                </div>
+                <div class="hero-text">
+                    <h1>Hi, I'm Madison 👋</h1>
+                    <p>
+                        Based in Charlotte, NC, and always learning. I'm an AI full-stack engineer who 
+                        enjoys building polished UIs, strong functionality, and back-end systems that keep 
+                        data accurate and accessible. I integrate AI to improve the user experience and make 
+                        products genuinely helpful. Outside of tech, I make music on my beat pad and MacBook. 
+                        Let's grab a coffee and chat!
+                    </p>
+                    <div class="cta-buttons">
+                        <a href="Projects.html" class="btn btn-primary">View My Work</a>
+                        <a href="Contact.html" class="btn btn-secondary">Let's Connect</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Highlights -->
+        <section class="highlights">
+            <h2>Quick Highlights</h2>
+            <ul>
+                <li><strong>25+ Projects Completed</strong> - Full-stack development from frontend to backend</li>
+                <li><strong>Hackathon Success</strong> - Winner of 1 out of 3 hackathons participated in</li>
+                <li><strong>Conference Speaker</strong> - Presented at AI sustainability conference at Red Ventures</li>
+                <li><strong>Product Demos</strong> - Showcased Plant Pal to Red Ventures and Ally Bank executives</li>
+                <li><strong>AI-Powered Solutions</strong> - Specialized in integrating intelligent features into applications</li>
+                <li><strong>Collaborative Team Player</strong> - Strong communicator and agile team contributor</li>
+            </ul>
+        </section>
+
+        <!-- Tech Stack -->
+        <section class="tech-stack">
+            <h2>Tech Stack & Technologies</h2>
+            <ul>
+                <li><strong>Languages:</strong> HTML, CSS, JavaScript, SASS, Python, SQL</li>
+                <li><strong>Frontend:</strong> React, React Native, Responsive Design (Flexbox, Grid, Media Queries)</li>
+                <li><strong>Backend:</strong> Node.js, Express, REST APIs</li>
+                <li><strong>Databases:</strong> MySQL, MongoDB, AWS RDS</li>
+                <li><strong>AI Integration:</strong> OpenAI API, Claude API, Perennial API</li>
+                <li><strong>Cloud & Hosting:</strong> AWS, Vercel, Render, Railway, Supabase</li>
+                <li><strong>Testing:</strong> Jest, Cypress</li>
+                <li><strong>Version Control:</strong> Git, GitHub</li>
+                <li><strong>Development Tools:</strong> Visual Studio Code, Agile/Scrum methodologies, ClickUp</li>
+                <li><strong>Collaboration:</strong> Microsoft Teams, Slack, Microsoft Outlook</li>
+            </ul>
+        </section>
+
+        <!-- Featured Projects -->
+        <section class="featured-projects">
+            <h2>Featured Projects</h2>
+            
+            <div class="project-card">
+                <h3>What Are You Wearing?</h3>
+                <p class="project-tagline">🏆 Hackathon Winner - Code for Justice</p>
+                <p>An award-winning website for fast4ward, a fictional non-profit raising awareness 
+                about fast fashion's hidden costs. Through clean design and impactful storytelling, 
+                we educated visitors on the social and environmental consequences of clothing production.</p>
+                <div class="project-tags">
+                    <span class="tag">HTML/CSS</span>
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">BEM</span>
+                    <span class="tag">Responsive Design</span>
+                </div>
+                <a href="https://what-are-you-wearing.vercel.app/" class="link-arrow">View The Website →</a>
+            </div>
+
+            <div class="project-card">
+                <h3>Plant Pal</h3>
+                <p class="project-tagline">🌱 Road to Hire Hackathon - Red Ventures</p>
+                <p>Full-stack web app that helps users grow healthier plants through AI-powered guidance 
+                and sustainability insights. Features an AI Botanist chatbot that diagnoses plant issues, 
+                personalized care recommendations using OpenAI and Perenual APIs, and tracks environmental 
+                impact like CO₂ removal.</p>
+                <div class="project-tags">
+                    <span class="tag">React.js</span>
+                    <span class="tag">Node.js</span>
+                    <span class="tag">MySQL</span>
+                    <span class="tag">OpenAI API</span>
+                    <span class="tag">AI Integration</span>
+                </div>
+                <a href="https://plant-pal-production.up.railway.app/" class="link-arrow">View The Website →</a>
+            </div>
+
+            <div class="project-card">
+                <h3>Entropy Arena</h3>
+                <p class="project-tagline">🔐 Road to Hire Capstone Project</p>
+                <p>Gamified password-strength platform that makes cybersecurity education engaging and 
+                accessible. Features AI-powered feedback using Claude by Anthropic to help users 
+                understand and build stronger passwords. Includes secure authentication, leaderboards, 
+                and real-time password analysis.</p>
+                <div class="project-tags">
+                    <span class="tag">React.js</span>
+                    <span class="tag">Node.js</span>
+                    <span class="tag">MySQL</span>
+                    <span class="tag">AWS RDS</span>
+                    <span class="tag">Claude AI</span>
+                    <span class="tag">bcrypt</span>
+                </div>
+                <a href="https://development.d1zb36hw4mnhw5.amplifyapp.com/" class="link-arrow">View The Website →</a>
+            </div>
+
+            <div class="view-all">
+                <a href="Projects.html" class="btn btn-secondary">View All Projects</a>
+            </div>
+        </section>
+        <!-- Call to Action -->
+        <section class="cta">
+            <h2>Let's Connect!</h2>
+            <p>I'm always open to new opportunities and collaborations. Feel free to reach out!</p>
+            <a href="Contact.html" class="btn btn-primary">Get in Touch</a>
+        </section>
+        <!-- Footer -->
+        <footer class="shared__footer">
+            <h4 id="Cell_Phone_Number">Cell Phone Number</h4>
+            <p>(704) 604-8958</p>
+            <h4 id="Email_Address">Email Address</h4>
+            <p>madisonduran74@gmail.com</p>
+            <div class="social-links">
+                <a href="https://github.com/MadisonDuran" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/madison-duran-60b679248/" target="_blank">LinkedIn</a>
+            </div>
+            <p>&copy; 2025 Madison Duran. All rights reserved.</p>
+        </footer>
     </body>
-    <p>Hi, I’m Madison — Based in Charlotte, NC, and always learning.
-I’m a AI full-stack engineer who enjoys building polished UIs, strong functionality, 
-and back-end systems that keep data accurate and accessible. I integrate AI to improve 
-the user experience and make products genuinely helpful. Outside of tech, I make music 
-on my beat pad and MacBook. Let's grab a coffee and connect!</p>
-    <h2>Tech Stack & Technologies</h2>
-    <ul>
-        <li><strong>Languages:</strong> HTML, CSS, JavaScript, SASS, Python, SQL</li>
-        <li><strong>Frontend:</strong> React, Responsive Design (Flexbox, Grid, Media Queries)</li>
-        <li><strong>Backend:</strong> Node.js, Express, REST APIs</li>
-        <li><strong>Databases:</strong> MySQL, MongoDB, AWS RDS</li>
-        <li><strong>AI Integration:</strong> OpenAI API, Claude API, Perennial API</li>
-        <li><strong>Cloud & Hosting:</strong> AWS, Vercel, Render, Railway, Supabase</li>
-        <li><strong>Testing:</strong> Jest, Cypress</li>
-        <li><strong>Version Control:</strong> Git, GitHub</li>
-        <li><strong>Development Tools:</strong> Visual Studio Code, Agile/Scrum methodologies, ClickUp</li>
-        <li><strong>Collaboration:</strong> Microsoft Teams, Slack, Microsoft Outlook</li>
-    </ul>
-    
 </html>
