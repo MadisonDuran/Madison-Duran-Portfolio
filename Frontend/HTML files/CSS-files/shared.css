@@ -1,6 +1,23 @@
 /* Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
+/* CSS Variables */
+:root {
+    --font-logo: 'Inter', 'Helvetica Neue', 'Arial', sans-serif;
+    --font-title: 'garamond-premier-pro', 'Poppins', sans-serif;
+    --font-text: 'DS Trade Gothic', 'Poppins', sans-serif;
+    --title-color: #000;
+}
+
+/* Logo Styling */
+.nav_logo {
+    color: var(--title-color);
+    font-family: var(--font-logo);
+    letter-spacing: 4px;
+    font-weight: 600;
+    margin: 0;
+}
+
 /* Shared Header */
 header {
     position: fixed;

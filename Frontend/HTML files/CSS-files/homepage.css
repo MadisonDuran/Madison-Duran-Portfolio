@@ -11,9 +11,28 @@ body {
 
 .hero-content {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    gap: 2rem;
+    gap: 3rem;
     max-width: 1200px;
     margin: 0 auto;
+}
+
+.hero-image {
+    display: flex;
+    justify-content: left;
+    align-self: flex-start;
+}
+
+.hero-image img {
+    object-fit: cover;
+    width: 35%;
+    height: 15%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hero-text {
+    text-align: left;
+    max-width: 600px;
+    flex: 1;
 }
