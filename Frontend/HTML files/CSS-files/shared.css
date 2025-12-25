@@ -16,6 +16,7 @@
     letter-spacing: 4px;
     font-weight: 600;
     margin: 0;
+    animation: slideInFromTop 0.8s ease-out;
 }
 
 /* Shared Header */
@@ -44,10 +45,22 @@ header {
     display: flex;
     justify-content: flex-end;
     gap: 1.5rem;
+    animation: slideInFromTop 0.8s ease-out;
 }
 
 .linked__page a {
     text-decoration: none;
     color: black;
+}
+
+@keyframes slideInFromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
