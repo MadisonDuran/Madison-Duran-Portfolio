@@ -29,16 +29,20 @@
         <section class="hero">
             <div class="hero-content">
                 <div class="hero-image">
-                    <img src="DSC06435.JPG" alt="Madison Duran"/>
+                    <img src="/Images/DSC06435.JPG" alt="Madison Duran"/>
                 </div>
                 <div class="hero-text">
-                    <h1>Hi, I'm Madison 👋</h1>
+                    <h1>Hi<span class="wave">👋</span>My name is Madison Duran!</h1>
                     <p>
-                        Based in Charlotte, NC, and always learning. I'm an AI full-stack engineer who 
-                        enjoys building polished UIs, strong functionality, and back-end systems that keep 
-                        data accurate and accessible. I integrate AI to improve the user experience and make 
-                        products genuinely helpful. Outside of tech, I make music on my beat pad and MacBook. 
-                        Let's grab a coffee and chat!
+                         I'm a AI Full-Stack Engineer at GO CLT who enjoys building polished UIs, 
+                         strong functionality, and back-end systems that keep data accurate 
+                         and accessible. I integrate AI to improve the user experience and 
+                         make products genuinely helpful. Before this, I graduated from the 
+                         Road to Hire program by Red Ventures, where I developed skills in 
+                         full-stack development and AI integration. I am skilled in frontend and backend
+                         development, database management, and collaborative teamwork. Outside of work, 
+                         I love making music and traveling the world. Actively seeking new opportunities.
+                         Let's connect!
                     </p>
                     <div class="cta-buttons">
                         <a href="Projects.html" class="btn btn-primary">View My Work</a>
@@ -48,18 +52,108 @@
             </div>
         </section>
 
-        <!-- Quick Highlights -->
-        <section class="highlights">
-            <h2>Quick Highlights</h2>
-            <ul>
-                <li><strong>25+ Projects Completed</strong> - Full-stack development from frontend to backend</li>
-                <li><strong>Hackathon Success</strong> - Winner of 1 out of 3 hackathons participated in</li>
-                <li><strong>Conference Speaker</strong> - Presented at AI sustainability conference at Red Ventures</li>
-                <li><strong>Product Demos</strong> - Showcased Plant Pal to Red Ventures and Ally Bank executives</li>
-                <li><strong>AI-Powered Solutions</strong> - Specialized in integrating intelligent features into applications</li>
-                <li><strong>Collaborative Team Player</strong> - Strong communicator and agile team contributor</li>
-            </ul>
+        <!-- Featured Projects -->
+        <section class="featured-projects">
+            <h2>Explore my projects</h2>
+            
+            <div class="slider-container">
+                <button class="slider-btn prev" onclick="changeSlide(-1)">❮</button>
+                
+                <div class="slider-wrapper">
+                    <div class="project-card active">
+                        <img src="/Images/Screenshot 2025-12-25 024440.png" alt="What Are You Wearing Demo" class="project-image">
+                        <h3>What Are You Wearing?</h3>
+                        <p class="project-tagline">🏆 Hackathon Winner - Code for Justice</p>
+                        <p>An award-winning website for fast4ward, a fictional non-profit raising awareness 
+                        about fast fashion's hidden costs. Through clean design and impactful storytelling, 
+                        we educated visitors on the social and environmental consequences of clothing production.</p>
+                        <div class="project-tags">
+                            <span class="tag">HTML/CSS</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">BEM</span>
+                            <span class="tag">Responsive Design</span>
+                        </div>
+                        <a href="https://what-are-you-wearing.vercel.app/" class="link-arrow">View The Website →</a>
+                    </div>
+
+                    <div class="project-card">
+                        <img src="/Images/screenshot1.png" alt="Plant Pal Demo" class="project-image">
+                        <h3>Plant Pal</h3>
+                        <p class="project-tagline">🌱 Road to Hire Hackathon - Red Ventures</p>
+                        <p>Full-stack web app that helps users grow healthier plants through AI-powered guidance 
+                        and sustainability insights. Features an AI Botanist chatbot that diagnoses plant issues, 
+                        personalized care recommendations using OpenAI and Perenual APIs, and tracks environmental 
+                        impact like CO₂ removal.</p>
+                        <div class="project-tags">
+                            <span class="tag">React.js</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">MySQL</span>
+                            <span class="tag">OpenAI API</span>
+                            <span class="tag">AI Integration</span>
+                        </div>
+                        <a href="https://plant-pal-production.up.railway.app/" class="link-arrow">View The Website →</a>
+                    </div>
+
+                    <div class="project-card">
+                        <img src="/Images/Screenshot 2025-12-25 025104.png" alt="Entropy Arena Demo" class="project-image">
+                        <h3>Entropy Arena</h3>
+                        <p class="project-tagline">🔐 Road to Hire Capstone Project</p>
+                        <p>Gamified password-strength platform that makes cybersecurity education engaging and 
+                        accessible. Features AI-powered feedback using Claude by Anthropic to help users 
+                        understand and build stronger passwords. Includes secure authentication, leaderboards, 
+                        and real-time password analysis.</p>
+                        <div class="project-tags">
+                            <span class="tag">React.js</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">MySQL</span>
+                            <span class="tag">AWS RDS</span>
+                            <span class="tag">Claude AI</span>
+                            <span class="tag">bcrypt</span>
+                        </div>
+                        <a href="https://development.d1zb36hw4mnhw5.amplifyapp.com/" class="link-arrow">View The Website →</a>
+                    </div>
+                </div>
+                
+                <button class="slider-btn next" onclick="changeSlide(1)">❯</button>
+            </div>
+            
+            <div class="slider-dots">
+                <span class="dot active" onclick="goToSlide(0)"></span>
+                <span class="dot" onclick="goToSlide(1)"></span>
+                <span class="dot" onclick="goToSlide(2)"></span>
+            </div>
+
+            <div class="view-all">
+                <a href="Projects.html" class="btn btn-secondary">View All Projects</a>
+            </div>
         </section>
+
+        <script>
+            let currentSlide = 0;
+            const slides = document.querySelectorAll('.project-card');
+            const dots = document.querySelectorAll('.dot');
+
+            function showSlide(n) {
+                slides.forEach(slide => slide.classList.remove('active'));
+                dots.forEach(dot => dot.classList.remove('active'));
+                
+                if (n >= slides.length) currentSlide = 0;
+                if (n < 0) currentSlide = slides.length - 1;
+                
+                slides[currentSlide].classList.add('active');
+                dots[currentSlide].classList.add('active');
+            }
+
+            function changeSlide(direction) {
+                currentSlide += direction;
+                showSlide(currentSlide);
+            }
+
+            function goToSlide(n) {
+                currentSlide = n;
+                showSlide(currentSlide);
+            }
+        </script>
 
         <!-- Tech Stack -->
         <section class="tech-stack">
@@ -78,64 +172,6 @@
             </ul>
         </section>
 
-        <!-- Featured Projects -->
-        <section class="featured-projects">
-            <h2>Featured Projects</h2>
-            
-            <div class="project-card">
-                <h3>What Are You Wearing?</h3>
-                <p class="project-tagline">🏆 Hackathon Winner - Code for Justice</p>
-                <p>An award-winning website for fast4ward, a fictional non-profit raising awareness 
-                about fast fashion's hidden costs. Through clean design and impactful storytelling, 
-                we educated visitors on the social and environmental consequences of clothing production.</p>
-                <div class="project-tags">
-                    <span class="tag">HTML/CSS</span>
-                    <span class="tag">JavaScript</span>
-                    <span class="tag">BEM</span>
-                    <span class="tag">Responsive Design</span>
-                </div>
-                <a href="https://what-are-you-wearing.vercel.app/" class="link-arrow">View The Website →</a>
-            </div>
-
-            <div class="project-card">
-                <h3>Plant Pal</h3>
-                <p class="project-tagline">🌱 Road to Hire Hackathon - Red Ventures</p>
-                <p>Full-stack web app that helps users grow healthier plants through AI-powered guidance 
-                and sustainability insights. Features an AI Botanist chatbot that diagnoses plant issues, 
-                personalized care recommendations using OpenAI and Perenual APIs, and tracks environmental 
-                impact like CO₂ removal.</p>
-                <div class="project-tags">
-                    <span class="tag">React.js</span>
-                    <span class="tag">Node.js</span>
-                    <span class="tag">MySQL</span>
-                    <span class="tag">OpenAI API</span>
-                    <span class="tag">AI Integration</span>
-                </div>
-                <a href="https://plant-pal-production.up.railway.app/" class="link-arrow">View The Website →</a>
-            </div>
-
-            <div class="project-card">
-                <h3>Entropy Arena</h3>
-                <p class="project-tagline">🔐 Road to Hire Capstone Project</p>
-                <p>Gamified password-strength platform that makes cybersecurity education engaging and 
-                accessible. Features AI-powered feedback using Claude by Anthropic to help users 
-                understand and build stronger passwords. Includes secure authentication, leaderboards, 
-                and real-time password analysis.</p>
-                <div class="project-tags">
-                    <span class="tag">React.js</span>
-                    <span class="tag">Node.js</span>
-                    <span class="tag">MySQL</span>
-                    <span class="tag">AWS RDS</span>
-                    <span class="tag">Claude AI</span>
-                    <span class="tag">bcrypt</span>
-                </div>
-                <a href="https://development.d1zb36hw4mnhw5.amplifyapp.com/" class="link-arrow">View The Website →</a>
-            </div>
-
-            <div class="view-all">
-                <a href="Projects.html" class="btn btn-secondary">View All Projects</a>
-            </div>
-        </section>
         <!-- Call to Action -->
         <section class="cta">
             <h2>Let's Connect!</h2>

@@ -25,6 +25,7 @@ header {
     right: 0;
     width: 100%;
     z-index: 1000;
+    border-bottom: 3px solid #000000;
 }
 
 .header-content {
@@ -42,7 +43,7 @@ header {
     padding: 0;
     display: flex;
     justify-content: flex-end;
-    gap: 2rem;
+    gap: 1.5rem;
 }
 
 .linked__page a {
