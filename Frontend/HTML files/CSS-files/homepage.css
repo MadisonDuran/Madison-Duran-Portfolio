@@ -231,3 +231,35 @@ body {
 .view-all {
     text-align: center;
 }
+
+/* Tech Stack Styles */
+.tech-stack {
+    padding: 3rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.tech-stack h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.tech-logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+}
+
+.tech-logo {
+    height: 80px;
+    width: auto;
+    object-fit: contain;
+    transition: transform 0.3s;
+}
+
+.tech-logo:hover {
+    transform: scale(1.1);
+}
