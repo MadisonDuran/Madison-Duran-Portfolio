@@ -64,3 +64,34 @@ header {
     }
 }
 
+/* Footer Styles */
+.shared__footer {
+    background-color: #f8f9fa;
+    padding: 3rem 2rem 2rem;
+    text-align: center;
+    border-top: 1px solid #e0e0e0;
+}
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.footer-social a {
+    color: #333;
+    font-size: 2rem;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.footer-social a:hover {
+    transform: translateY(-5px);
+    color: #5865f2;
+}
+
+.footer-copyright {
+    color: #666;
+    font-size: 0.9rem;
+    margin: 0;
+}

@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Madison Duran - AI Full-Stack Engineer specializing in polished UIs, strong functionality, and AI integration.">
         <title>MADISON DURAN</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
         <link rel="stylesheet" href="Frontend/HTML files/CSS-files/homepage.css">
         <link rel="stylesheet" href="Frontend/HTML files/CSS-files/shared.css">
     </head>
@@ -29,10 +30,10 @@
         <section class="hero">
             <div class="hero-content">
                 <div class="hero-image">
-                    <img src="/Images/DSC06435.JPG" alt="Madison Duran"/>
+                    <img src="Images/DSC06435.JPG" alt="Madison Duran"/>
                 </div>
                 <div class="hero-text">
-                    <h1>Hi<span class="wave">👋</span>My name is Madison Duran!</h1>
+                    <h1><span id="typewriter"></span><span class="cursor">|</span></h1>
                     <p>
                          I'm a AI Full-Stack Engineer at GO CLT who enjoys building polished UIs, 
                          strong functionality, and back-end systems that keep data accurate 
@@ -45,8 +46,15 @@
                          Let's connect!
                     </p>
                     <div class="cta-buttons">
-                        <a href="Projects.html" class="btn btn-primary">View My Work</a>
-                        <a href="Contact.html" class="btn btn-secondary">Let's Connect</a>
+                        <a href="Projects.html" class="btn btn-primary">
+                            <i class="fas fa-briefcase"></i> View My Work
+                        </a>
+                        <a href="https://www.linkedin.com/in/madison-duran/" target="_blank" class="btn btn-secondary">
+                            <i class="fab fa-linkedin"></i> LinkedIn
+                        </a>
+                        <a href="https://github.com/MadisonDuran" target="_blank" class="btn btn-github">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
                     </div>
                 </div>
             </div>
@@ -61,7 +69,7 @@
                 
                 <div class="slider-wrapper">
                     <div class="project-card active">
-                        <img src="/Images/Screenshot 2025-12-25 024440.png" alt="What Are You Wearing Demo" class="project-image">
+                        <img src="Images/Screenshot 2025-12-25 024440.png" alt="What Are You Wearing Demo" class="project-image">
                         <h3>What Are You Wearing?</h3>
                         <p class="project-tagline">🏆 Hackathon Winner - Code for Justice</p>
                         <p>An award-winning website for fast4ward, a fictional non-profit raising awareness 
@@ -77,7 +85,7 @@
                     </div>
 
                     <div class="project-card">
-                        <img src="/Images/screenshot1.png" alt="Plant Pal Demo" class="project-image">
+                        <img src="Images/screenshot1.png" alt="Plant Pal Demo" class="project-image">
                         <h3>Plant Pal</h3>
                         <p class="project-tagline">🌱 Road to Hire Hackathon - Red Ventures</p>
                         <p>Full-stack web app that helps users grow healthier plants through AI-powered guidance 
@@ -95,7 +103,7 @@
                     </div>
 
                     <div class="project-card">
-                        <img src="/Images/Screenshot 2025-12-25 025104.png" alt="Entropy Arena Demo" class="project-image">
+                        <img src="Images/Screenshot 2025-12-25 025104.png" alt="Entropy Arena Demo" class="project-image">
                         <h3>Entropy Arena</h3>
                         <p class="project-tagline">🔐 Road to Hire Capstone Project</p>
                         <p>Gamified password-strength platform that makes cybersecurity education engaging and 
@@ -124,7 +132,9 @@
             </div>
 
             <div class="view-all">
-                <a href="Projects.html" class="btn btn-secondary">View All Projects</a>
+                <a href="Projects.html" class="btn btn-secondary">
+                    <i class="fas fa-folder-open"></i> View All Projects
+                </a>
             </div>
         </section>
 
@@ -163,9 +173,21 @@
                 <img src="Images/CSS-Logo-2011.png" alt="CSS3" class="tech-logo">
                 <img src="Images/Sass_Logo_Color.svg.png" alt="Sass" class="tech-logo">
                 <img src="Images/JavaScript-Symbol.png" alt="Javascript" class="tech-logo">
+                <img src="Images/download (1).jpg" alt="Python" class="tech-logo">
                 <img src="Images/download (3).png" alt="Node" class="tech-logo">
+                <img src="Images/download (2).jpg" alt="Express.js" class="tech-logo">
                 <img src="Images/Sql_data_base_with_logo.png" alt="SQL" class="tech-logo">
                 <img src="Images/react_original_wordmark_logo_icon_146375.webp" alt="React" class="tech-logo">
+                <img src="Images/download (4).png" alt="React Native" class="tech-logo">
+                <img src="Images/download (5).png" alt="Amazon cloud" class="tech-logo">
+                <img src="Images/download (6).png" alt="Amazon RDS" class="tech-logo">
+                <img src="Images/download (7).png" alt="Open AI API" class="tech-logo">
+                <img src="Images/Is Claude AI HIPAA comHackers exploit Claude AI to steal user data via prompt injection backdoorpliant-1.webp" alt="Claude API" class="tech-logo">
+                <img src="Images/download (12).png" alt="Rest API" class="tech-logo">
+                <img src="Images/download (13).png" alt="Jest" class="tech-logo">
+                <img src="Images/download (14).png" alt="Cypress" class="tech-logo">
+                <img src="Images/download (10).png" alt="Git" class="tech-logo">
+                <img src="Images/download (11).png" alt="Github" class="tech-logo">
             </div>
         </section>
 
@@ -173,19 +195,40 @@
         <section class="cta">
             <h2>Let's Connect!</h2>
             <p>I'm always open to new opportunities and collaborations. Feel free to reach out!</p>
-            <a href="Contact.html" class="btn btn-primary">Get in Touch</a>
+            <a href="Contact.html" class="btn btn-primary">
+                <i class="fas fa-envelope"></i> Get in Touch
+            </a>
         </section>
         <!-- Footer -->
         <footer class="shared__footer">
-            <h4 id="Cell_Phone_Number">Cell Phone Number</h4>
-            <p>(704) 604-8958</p>
-            <h4 id="Email_Address">Email Address</h4>
-            <p>madisonduran74@gmail.com</p>
-            <div class="social-links">
-                <a href="https://github.com/MadisonDuran" target="_blank">GitHub</a>
-                <a href="https://www.linkedin.com/in/madison-duran-60b679248/" target="_blank">LinkedIn</a>
+            <div class="footer-social">
+                <a href="https://github.com/MadisonDuran" target="_blank" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/madison-duran-60b679248/" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="mailto:madisonduran74@gmail.com" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
             </div>
-            <p>&copy; 2025 Madison Duran. All rights reserved.</p>
+            <p class="footer-copyright">&copy; 2025 Madison Duran. All Rights Reserved.</p>
         </footer>
+
+        <script>
+            const text = "Hi 👋 My name is Madison Duran!";
+            const typewriter = document.getElementById('typewriter');
+            let i = 0;
+
+            function typeWriter() {
+                if (i < text.length) {
+                    typewriter.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, 100);
+                }
+            }
+
+            typeWriter();
+        </script>
     </body>
 </html>

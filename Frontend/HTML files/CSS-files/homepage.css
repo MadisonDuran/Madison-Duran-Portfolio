@@ -48,6 +48,17 @@ body {
     flex: 1;
 }
 
+.cursor {
+    display: inline-block;
+    animation: blink 0.7s infinite;
+    font-weight: 400;
+}
+
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}
+
 .cta-buttons {
     display: flex;
     gap: 1rem;
@@ -59,17 +70,31 @@ body {
     text-decoration: none;
     color: white;
     font-weight: 600;
-    border-radius: 6px;
+    border-radius: 8px;
     transition: transform 0.2s, box-shadow 0.2s;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
     text-transform: uppercase;
-    font-size: 0.9rem;
-    letter-spacing: 0.5px;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
 }
 
 .btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.btn i {
+    font-size: 1.1rem;
+}
+
+.btn-linkedin {
+    background-color: #0077b5;
+}
+
+.btn-linkedin:hover {
+    background-color: #005885;
 }
 
 .btn-primary {
@@ -86,6 +111,22 @@ body {
 
 .btn-secondary:hover {
     background-color: #006399;
+}
+
+.btn-github {
+    background-color: #e74c3c;
+}
+
+.btn-github:hover {
+    background-color: #c0392b;
+}
+
+.btn-instagram {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.btn-instagram:hover {
+    background: linear-gradient(45deg, #d67d2b 0%, #ce5630 25%, #c41e36 50%, #b41b58 75%, #a51278 100%);
 }
 
 .wave {
@@ -274,4 +315,21 @@ body {
 
 .tech-logo:hover {
     transform: scale(1.1);
+}
+
+.cta {
+    padding: 3rem 2rem;
+    text-align: center;
+    background-color: #f8f9fa;
+}
+
+.cta h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.cta p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 2rem;
 }
