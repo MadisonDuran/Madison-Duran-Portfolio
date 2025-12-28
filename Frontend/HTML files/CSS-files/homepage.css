@@ -7,6 +7,36 @@ body {
 
 .hero {
     padding: 3rem 2rem;
+    background-color:#fbfefb;
+    color: #333333;
+    border: 15px solid #2c3e50;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    position: relative;
+    margin: 2rem;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 8px;
+    background-color: #2c3e50;
+    border-radius: 5px;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    right: 0;
+    height: 30px;
+    background: linear-gradient(to bottom, #2c3e50 0%, #1a252f 100%);
+    border-radius: 0 0 10px 10px;
 }
 
 .hero-content {
@@ -46,6 +76,124 @@ body {
 .hero-text {
     text-align: left;
     flex: 1;
+}
+
+.keyboard-container {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0;
+    margin: 0 2rem 3rem 2rem;
+    background-color: #fbfefb;
+}
+
+.keyboard {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.keyboard-row {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.keyboard-row.row-2 {
+    margin-left: 0;
+}
+
+.keyboard-row.row-3 {
+    margin-left: 0;
+}
+
+.keyboard-row.row-4 {
+    margin-left: 0;
+}
+
+.key {
+    width: 45px;
+    height: 45px;
+    background-color: #e8e8e8;
+    border: 1px solid #d0d0d0;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #666;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    animation: keyPress 2s ease-in-out infinite;
+    cursor: default;
+    user-select: none;
+}
+
+.key.spacebar {
+    width: 250px;
+}
+
+.key-wide {
+    width: 70px;
+    font-size: 0.7rem;
+}
+
+.key-tab {
+    width: 60px;
+    font-size: 0.7rem;
+}
+
+.key-caps {
+    width: 70px;
+    font-size: 0.7rem;
+}
+
+.key-enter {
+    width: 85px;
+    font-size: 0.7rem;
+}
+
+.key-shift {
+    width: 90px;
+    font-size: 0.7rem;
+}
+
+.key-fn, .key-ctrl, .key-alt {
+    width: 50px;
+    font-size: 0.7rem;
+}
+
+.key-cmd {
+    width: 55px;
+    font-size: 1.2rem;
+}
+
+.key-arrow {
+    width: 45px;
+}
+
+.key-arrow-sm {
+    width: 45px;
+    height: 22px;
+    font-size: 0.7rem;
+}
+
+.key-arrow-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+
+@keyframes keyPress {
+    0%, 100% {
+        transform: translateY(0);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        background-color: #e8e8e8;
+    }
+    50% {
+        transform: translateY(3px);
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        background-color: #d0d0d0;
+    }
 }
 
 .cursor {

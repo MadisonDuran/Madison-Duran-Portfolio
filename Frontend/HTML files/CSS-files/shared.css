@@ -26,7 +26,8 @@ header {
     right: 0;
     width: 100%;
     z-index: 1000;
-    border-bottom: 3px solid #000000;
+    background-color: #f6f6f6;
+    border-bottom: 2px solid #e0e0e0;
 }
 
 .header-content {
