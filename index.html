@@ -247,6 +247,57 @@
             }
         </script>
 
+        <script>
+            // Keyboard interactivity
+            const keys = document.querySelectorAll('.key');
+            
+            // Click event for each key
+            keys.forEach(key => {
+                key.addEventListener('click', function() {
+                    this.classList.add('pressed');
+                    setTimeout(() => {
+                        this.classList.remove('pressed');
+                    }, 150);
+                });
+            });
+
+            // Real keyboard event listener
+            document.addEventListener('keydown', function(event) {
+                const keyMap = {
+                    '1': '1', '2': '2', '3': '3', '4': '4', '5': '5',
+                    '6': '6', '7': '7', '8': '8', '9': '9', '0': '0',
+                    'q': 'Q', 'w': 'W', 'e': 'E', 'r': 'R', 't': 'T',
+                    'y': 'Y', 'u': 'U', 'i': 'I', 'o': 'O', 'p': 'P',
+                    'a': 'A', 's': 'S', 'd': 'D', 'f': 'F', 'g': 'G',
+                    'h': 'H', 'j': 'J', 'k': 'K', 'l': 'L',
+                    'z': 'Z', 'x': 'X', 'c': 'C', 'v': 'V', 'b': 'B',
+                    'n': 'N', 'm': 'M'
+                };
+
+                const pressedKey = keyMap[event.key.toLowerCase()];
+                if (pressedKey) {
+                    const keyElement = Array.from(keys).find(k => k.textContent === pressedKey);
+                    if (keyElement) {
+                        keyElement.classList.add('pressed');
+                        setTimeout(() => {
+                            keyElement.classList.remove('pressed');
+                        }, 150);
+                    }
+                }
+
+                // Handle spacebar
+                if (event.key === ' ') {
+                    const spacebarElement = document.querySelector('.spacebar');
+                    if (spacebarElement) {
+                        spacebarElement.classList.add('pressed');
+                        setTimeout(() => {
+                            spacebarElement.classList.remove('pressed');
+                        }, 150);
+                    }
+                }
+            });
+        </script>
+
         <!-- Tech Stack -->
         <section class="tech-stack">
             <h2>Tech Stack & Technologies</h2>
