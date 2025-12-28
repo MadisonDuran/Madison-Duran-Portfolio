@@ -35,7 +35,7 @@
                 <div class="hero-text">
                     <h1><span id="typewriter"></span><span class="cursor">|</span></h1>
                     <p>
-                         I'm a AI Full-Stack Engineer at GO CLT who enjoys building polished UIs, 
+                         I'm a Full-Stack Engineer at GO CLT who enjoys building polished UIs, 
                          strong functionality, and back-end systems that keep data accurate 
                          and accessible. I integrate AI to improve the user experience and 
                          make products genuinely helpful. Before this, I graduated from the 
@@ -349,13 +349,16 @@
         </footer>
 
         <script>
-            const text = "Hi 👋 My name is Madison Duran!";
+            const text = "Hi! My name is Madison Duran.";
             const typewriter = document.getElementById('typewriter');
             let i = 0;
 
             function typeWriter() {
                 if (i < text.length) {
-                    typewriter.innerHTML += text.charAt(i);
+                    const char = text[i];
+                    const span = document.createElement('span');
+                    span.textContent = char;
+                    typewriter.appendChild(span);
                     i++;
                     setTimeout(typeWriter, 100);
                 }
