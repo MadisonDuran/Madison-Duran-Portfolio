@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact - Madison Duran</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <link rel="stylesheet" href="CSS-files/shared.css">
+        <style>
+            body {
+                font-family: 'Poppins', sans-serif;
+                background-color: #fafafa;
+            }
+
+            .main {
+                margin: 0 auto;
+                padding: 120px 1.5rem 3rem;
+                max-width: 700px;
+            }
+
+            .contact-section {
+                background: #f5f0e8;
+                padding: 2.5rem;
+                border-radius: 12px;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            }
+
+            h2 {
+                font-size: 2rem;
+                margin-bottom: 0.5rem;
+                color: #333;
+                text-align: center;
+            }
+
+            .intro {
+                margin-bottom: 2rem;
+                color: #666;
+                text-align: center;
+                line-height: 1.6;
+            }
+
+            .contact-form {
+                display: flex;
+                flex-direction: column;
+                gap: 0.25rem;
+            }
+
+            .form-row {
+                display: flex;
+                gap: 1rem;
+            }
+
+            .form-row div {
+                width: 100%;
+            }
+
+            .form-row label {
+                margin-bottom: 0.5rem;
+            }
+
+            input,
+            textarea,
+            select {
+                width: 100%;
+                padding: 0.75rem;
+                font-size: 1rem;
+                font-family: 'Poppins', sans-serif;
+                border: 1px solid #d4c4b0;
+                border-radius: 0.5rem;
+                background-color: #fff;
+                transition: border-color 0.3s ease;
+            }
+
+            input:focus,
+            textarea:focus,
+            select:focus {
+                outline: none;
+                border-color: #8b7355;
+            }
+
+            label {
+                font-weight: 600;
+                margin-top: 1rem;
+                display: block;
+                color: #333;
+                font-size: 0.95rem;
+            }
+
+            .btn {
+                margin-top: 1.5rem;
+                padding: 0.85rem 2rem;
+                background-color: #8b7355;
+                color: white;
+                border: none;
+                border-radius: 0.5rem;
+                cursor: pointer;
+                font-weight: 600;
+                font-size: 1rem;
+                transition: all 0.3s ease;
+            }
+
+            .btn:hover {
+                background-color: #6d5a43;
+                box-shadow: 0 4px 12px rgba(139, 115, 85, 0.3);
+                transform: translateY(-2px);
+            }
+
+            .contact-error {
+                color: #d32f2f;
+                padding: 0.25rem 0;
+                font-size: 0.85rem;
+            }
+
+            .input-valid {
+                border: 1px solid #4caf50;
+            }
+
+            .input-invalid {
+                border: 1px solid #d32f2f;
+            }
+
+            @media (max-width: 600px) {
+                .form-row {
+                    flex-direction: column;
+                    gap: 0;
+                }
+                
+                .main {
+                    padding: 100px 1rem 2rem;
+                }
+                
+                .contact-section {
+                    padding: 1.5rem;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Navigation Bar -->
+        <header>
+            <div class="header-content">
+                <p class="nav_logo">MADISON DURAN</p>
+                <nav>
+                    <ul class="nav__links">
+                        <li class="linked__page"><a href="../../index.html">Home</a></li>
+                        <li class="linked__page"><a href="Projects.html">Projects</a></li>
+                        <li class="linked__page"><a href="Experience.html">Work Experience</a></li>
+                        <li class="linked__page"><a href="Resources.html">Learning Resources</a></li>
+                        <li class="linked__page"><a href="Contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <!-------------------- MAIN -------------------->
+        <main class="main">
+            <section class="contact-section">
+                <div class="contact-left">
+                    <h2>Contact Us</h2>
+                    <p class="intro">Let us know how we can help. Fill out the form and our team will get back to you shortly.</p>
+                    <form onsubmit="validate(event)" class="contact-form" id="form">
+                        <div class="form-row">
+                            <div>
+                                <label for="first-name">First name</label>
+                                <input type="text" id="first-name" name="first-name"/>
+                                <div class="contact-error" id="error-firstName"></div>
+                            </div>
+                            <div>
+                                <label for="last-name">Last name</label>
+                                <input type="text" id="last-name" name="last-name"/>
+                                <div class="contact-error" id="error-lastName"></div>
+                            </div>
+                        </div>
+
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email"/>
+                        <div class="contact-error" id="error-email"></div>
+
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="4"></textarea>
+                        <div class="contact-error" id="error-message"></div>
+
+                        <div style="display: flex; align-items: flex-start; gap: 0.5rem; margin: 1rem 0;">
+                            <input type="checkbox" id="consent" name="consent" style="margin-top: 0.25rem;"/>
+                            <label for="consent" style="font-size: 0.9rem; line-height: 1.5;">I consent to having this website store my submitted information so they can respond to my inquiry.</label>
+                        </div>
+                        <div class="contact-error" id="error-consent"></div>
+
+                        <button type="submit" class="btn">Send message</button>
+                    </form>
+                    
+                    <!-- Thank You Message -->
+                    <div id="thank-you-message" style="display: none; text-align: center; padding: 2rem;">
+                        <h3 style="color: #8b7355; font-size: 1.75rem; margin-bottom: 1rem;">Thank You!</h3>
+                        <p style="color: #333; line-height: 1.8; font-size: 1.1rem;">Your message has been successfully sent. I'll get back to you as soon as possible!</p>
+                        <p style="color: #666; margin-top: 1rem;">✓ Message received</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="shared__footer">
+            <div class="footer-social">
+                <a href="https://github.com/MadisonDuran" target="_blank" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/madison-duran-60b679248/" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="mailto:madisonduran74@gmail.com" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+            <p class="footer-copyright">&copy; 2025 Madison Duran. All Rights Reserved.</p>
+        </footer>
+        
+        <script>
+            function validate(event) {
+                event.preventDefault();
+                
+                let isValid = true;
+                
+                // Clear previous errors
+                document.querySelectorAll('.contact-error').forEach(el => el.textContent = '');
+                document.querySelectorAll('input, textarea').forEach(el => {
+                    el.classList.remove('input-valid', 'input-invalid');
+                });
+                
+                // Validate first name
+                const firstName = document.getElementById('first-name');
+                if (!firstName.value.trim()) {
+                    document.getElementById('error-firstName').textContent = 'First name is required';
+                    firstName.classList.add('input-invalid');
+                    isValid = false;
+                } else {
+                    firstName.classList.add('input-valid');
+                }
+                
+                // Validate last name
+                const lastName = document.getElementById('last-name');
+                if (!lastName.value.trim()) {
+                    document.getElementById('error-lastName').textContent = 'Last name is required';
+                    lastName.classList.add('input-invalid');
+                    isValid = false;
+                } else {
+                    lastName.classList.add('input-valid');
+                }
+                
+                // Validate email
+                const email = document.getElementById('email');
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!email.value.trim()) {
+                    document.getElementById('error-email').textContent = 'Email is required';
+                    email.classList.add('input-invalid');
+                    isValid = false;
+                } else if (!emailRegex.test(email.value)) {
+                    document.getElementById('error-email').textContent = 'Please enter a valid email address';
+                    email.classList.add('input-invalid');
+                    isValid = false;
+                } else {
+                    email.classList.add('input-valid');
+                }
+                
+                // Validate message
+                const message = document.getElementById('message');
+                if (!message.value.trim()) {
+                    document.getElementById('error-message').textContent = 'Message is required';
+                    message.classList.add('input-invalid');
+                    isValid = false;
+                } else {
+                    message.classList.add('input-valid');
+                }
+                
+                // Validate consent checkbox
+                const consent = document.getElementById('consent');
+                if (!consent.checked) {
+                    document.getElementById('error-consent').textContent = 'You must agree to the consent terms';
+                    isValid = false;
+                }
+                
+                // If valid, show thank you message
+                if (isValid) {
+                    document.getElementById('form').style.display = 'none';
+                    document.querySelector('h2').style.display = 'none';
+                    document.querySelector('.intro').style.display = 'none';
+                    document.getElementById('thank-you-message').style.display = 'block';
+                }
+                
+                return false;
+            }
+        </script>
+    </body>
+</html>

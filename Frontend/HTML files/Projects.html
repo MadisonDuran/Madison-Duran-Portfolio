@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Projects - Madison Duran</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <link rel="stylesheet" href="CSS-files/shared.css">
+        <style>
+            body {
+                font-family: 'Poppins', sans-serif;
+            }
+
+            .projects-main {
+                padding-top: 100px;
+                min-height: 60vh;
+                max-width: 1200px;
+                margin: 0 auto;
+                padding-left: 20px;
+                padding-right: 20px;
+                padding-bottom: 3rem;
+            }
+
+            .projects-header {
+                text-align: center;
+                margin-bottom: 3rem;
+            }
+
+            .projects-header h1 {
+                font-size: 2.5rem;
+                margin-bottom: 1rem;
+            }
+
+            .projects-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+                gap: 2rem;
+                margin-bottom: 3rem;
+            }
+
+            .project-card {
+                background: #f5f0e8;
+                padding: 2rem;
+                border-radius: 12px;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                cursor: pointer;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .project-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            }
+
+            .project-card > *:not(.link-arrow) {
+                flex-shrink: 0;
+            }
+
+            .project-card .link-arrow {
+                margin-top: auto;
+            }
+
+            .project-image {
+                width: 100%;
+                height: 200px;
+                object-fit: cover;
+                border-radius: 8px;
+                margin-bottom: 1.5rem;
+            }
+
+            .project-card h3 {
+                font-size: 1.5rem;
+                margin-bottom: 0.5rem;
+                color: #333;
+            }
+
+            .project-tagline {
+                color: #8b7355;
+                font-weight: 600;
+                margin-bottom: 1rem;
+            }
+
+            .project-card p {
+                color: #666;
+                line-height: 1.6;
+                margin-bottom: 1rem;
+            }
+
+            .project-features {
+                margin-bottom: 1.5rem;
+            }
+
+            .project-features h4 {
+                font-size: 1rem;
+                margin-bottom: 0.5rem;
+                color: #8b7355;
+            }
+
+            .project-features ul {
+                list-style-position: inside;
+                color: #666;
+                line-height: 1.8;
+            }
+
+            .project-tags {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 0.5rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .tag {
+                background: #fff;
+                padding: 0.4rem 0.8rem;
+                border-radius: 20px;
+                font-size: 0.85rem;
+                color: #333;
+                box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            }
+
+            .link-arrow {
+                display: inline-block;
+                color: #8b7355;
+                text-decoration: none;
+                font-weight: 600;
+                transition: transform 0.3s ease;
+            }
+
+            .link-arrow:hover {
+                transform: translateX(5px);
+            }
+
+            @media (max-width: 768px) {
+                .projects-grid {
+                    grid-template-columns: 1fr;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Navigation Bar -->
+        <header>
+            <div class="header-content">
+                <p class="nav_logo">MADISON DURAN</p>
+                <nav>
+                    <ul class="nav__links">
+                        <li class="linked__page"><a href="../../index.html">Home</a></li>
+                        <li class="linked__page"><a href="Projects.html">Projects</a></li>
+                        <li class="linked__page"><a href="Experience.html">Work Experience</a></li>
+                        <li class="linked__page"><a href="Resources.html">Learning Resources</a></li>
+                        <li class="linked__page"><a href="Contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="projects-main">
+            <div class="projects-header">
+                <h1>My Projects</h1>
+                <p style="color: #666; font-size: 1.1rem;">A collection of projects showcasing my development skills</p>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Entropy Arena -->
+                <div class="project-card" onclick="window.open('https://development.d1zb36hw4mnhw5.amplifyapp.com/', '_blank')">
+                    <img src="../../Images/Screenshot 2025-12-25 025104.png" alt="Entropy Arena Demo" class="project-image">
+                    <h3>Entropy Arena</h3>
+                    <p class="project-tagline">🔐 Road to Hire Capstone Project · December 2025</p>
+                    <p>Gamified password-strength platform that makes cybersecurity education engaging and accessible. Features AI-powered feedback using Claude by Anthropic to help users understand and build stronger passwords. Includes secure authentication, leaderboards, and real-time password analysis.</p>
+                    
+                    <div class="project-features">
+                        <h4>Features:</h4>
+                        <ul>
+                            <li>AI-powered password feedback using Claude API</li>
+                            <li>Real-time password strength analysis</li>
+                            <li>Secure user authentication with bcrypt</li>
+                            <li>Competitive leaderboard system</li>
+                            <li>Interactive gamified learning experience</li>
+                            <li>AWS RDS database integration</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="project-tags">
+                        <span class="tag">React.js</span>
+                        <span class="tag">Node.js</span>
+                        <span class="tag">MySQL</span>
+                        <span class="tag">AWS RDS</span>
+                        <span class="tag">Claude AI</span>
+                        <span class="tag">bcrypt</span>
+                    </div>
+                    <a href="https://development.d1zb36hw4mnhw5.amplifyapp.com/" target="_blank" class="link-arrow">View The Website →</a>
+                </div>
+
+                <!-- Plant Pal -->
+                <div class="project-card" onclick="window.open('https://plant-pal-production.up.railway.app/', '_blank')">
+                    <img src="../../Images/screenshot1.png" alt="Plant Pal Demo" class="project-image">
+                    <h3>Plant Pal</h3>
+                    <p class="project-tagline">🌱 Road to Hire Hackathon - Red Ventures · November 2025</p>
+                    <p>Full-stack web app that helps users grow healthier plants through AI-powered guidance and sustainability insights. Features an AI Botanist chatbot that diagnoses plant issues, personalized care recommendations using OpenAI and Perenual APIs, and tracks environmental impact like CO₂ removal.</p>
+                    
+                    <div class="project-features">
+                        <h4>Features:</h4>
+                        <ul>
+                            <li>AI Botanist chatbot for plant diagnosis</li>
+                            <li>Personalized care recommendations</li>
+                            <li>Integration with OpenAI and Perenual APIs</li>
+                            <li>Environmental impact tracking (CO₂ removal)</li>
+                            <li>Full-stack architecture with React and Node.js</li>
+                            <li>MySQL database for plant data management</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="project-tags">
+                        <span class="tag">React.js</span>
+                        <span class="tag">Node.js</span>
+                        <span class="tag">MySQL</span>
+                        <span class="tag">OpenAI API</span>
+                        <span class="tag">Perenual API</span>
+                        <span class="tag">AI Integration</span>
+                    </div>
+                    <a href="https://plant-pal-production.up.railway.app/" target="_blank" class="link-arrow">View The Website →</a>
+                </div>
+
+                <!-- Bubbles LRNR -->
+                <div class="project-card" onclick="window.open('https://bubbles-quizgen.onrender.com/', '_blank')">
+                    <img src="../../Images/AIQuiz.png" alt="Bubbles LRNR Demo" class="project-image">
+                    <h3>Bubbles LRNR</h3>
+                    <p class="project-tagline">🤖 AI Quiz Generator · October 2025</p>
+                    <p>An AI-powered quiz generation platform that creates custom quizzes using Claude AI. Built with React and Vite for a fast, modern learning experience. Generates dynamic quiz questions based on topics and difficulty levels.</p>
+                    
+                    <div class="project-features">
+                        <h4>Features:</h4>
+                        <ul>
+                            <li>AI-powered quiz generation using Claude API</li>
+                            <li>Custom quiz creation by topic</li>
+                            <li>Dynamic question generation</li>
+                            <li>Interactive quiz interface</li>
+                            <li>Built with React Vite for fast performance</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="project-tags">
+                        <span class="tag">React</span>
+                        <span class="tag">Node.js</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">Claude API</span>
+                        <span class="tag">Vite</span>
+                        <span class="tag">JSON</span>
+                    </div>
+                    <a href="https://bubbles-quizgen.onrender.com/" target="_blank" class="link-arrow">View The Website →</a>
+                </div>
+
+                <!-- Similar Movies -->
+                <div class="project-card" onclick="window.open('https://similar-movies-topaz.vercel.app/', '_blank')">
+                    <img src="../../Images/similarmovies.png" alt="Similar Movies Demo" class="project-image">
+                    <h3>Similar Movies</h3>
+                    <p class="project-tagline">🎬 Road to Hire Project · September 2025</p>
+                    <p>A movie discovery application where users can search for movies and get personalized recommendations for similar films. Built with the TMDB API to provide accurate movie data and suggestions based on user selections.</p>
+                    
+                    <div class="project-features">
+                        <h4>Features:</h4>
+                        <ul>
+                            <li>Search movies by title</li>
+                            <li>Click to view movie details</li>
+                            <li>Get similar movie recommendations using TMDB API</li>
+                            <li>Server-side API key management</li>
+                            <li>Responsive movie browsing interface</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="project-tags">
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">Node.js</span>
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">TMDB API</span>
+                    </div>
+                    <a href="https://similar-movies-topaz.vercel.app/" target="_blank" class="link-arrow">View The Website →</a>
+                </div>
+
+                <!-- Budget Tracker -->
+                <div class="project-card" onclick="window.open('https://budget-tracker-green-xi.vercel.app/', '_blank')">
+                    <img src="../../Images/BudgetTracker.png" alt="Budget Tracker Demo" class="project-image">
+                    <h3>Budget Tracker</h3>
+                    <p class="project-tagline">💰 Road to Hire Project · August 2025</p>
+                    <p>A budget tracker that helps keep track of income and expenses all in one place. Simple to use with a clean interface. Add your income and expenses, get instant updates, remove entries, and reset the tracker to start from a clean slate.</p>
+                    
+                    <div class="project-features">
+                        <h4>Features:</h4>
+                        <ul>
+                            <li>Track income and expenses in real-time</li>
+                            <li>Add budget entries with descriptions</li>
+                            <li>Remove individual expenses</li>
+                            <li>Reset all functionality</li>
+                            <li>Instant total calculations</li>
+                            <li>Clean, intuitive interface</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="project-tags">
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">HTML</span>
+                        <span class="tag">SASS</span>
+                        <span class="tag">CSS</span>
+                    </div>
+                    <a href="https://budget-tracker-green-xi.vercel.app/" target="_blank" class="link-arrow">View The Website →</a>
+                </div>
+
+                <!-- Live Lao Love -->
+                <div class="project-card" onclick="window.open('https://live-lao-love.vercel.app/HTML_files/index.html', '_blank')">
+                    <img src="../../Images/lao.png" alt="Live Lao Love Demo" class="project-image">
+                    <h3>Live Lao Love</h3>
+                    <p class="project-tagline">🏮 Road to Hire Project · August 2025</p>
+                    <p>A cultural website celebrating and embracing Lao culture. Discover authentic Lao products and immerse yourself in the Lao vibe through this engaging platform built with HTML, CSS, and JavaScript.</p>
+                    
+                    <div class="project-features">
+                        <h4>Features:</h4>
+                        <ul>
+                            <li>Showcase authentic Lao products</li>
+                            <li>Cultural information and content</li>
+                            <li>Interactive user experience</li>
+                            <li>Clean, culturally-inspired design</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="project-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JavaScript</span>
+                    </div>
+                    <a href="https://live-lao-love.vercel.app/HTML_files/index.html" target="_blank" class="link-arrow">View The Website →</a>
+                </div>
+
+                <!-- Calculator Challenge -->
+                <div class="project-card" onclick="window.open('https://calculator-challenge-one.vercel.app/', '_blank')">
+                    <img src="../../Images/Calculator.png" alt="Calculator Challenge Demo" class="project-image">
+                    <h3>Calculator Challenge</h3>
+                    <p class="project-tagline">💻 Road to Hire Project · July 2025</p>
+                    <p>A simple, pastel-colored calculator built with HTML, CSS, and JavaScript. It performs basic arithmetic operations and is fully responsive for mobile, tablet, and desktop.</p>
+                    
+                    <div class="project-features">
+                        <h4>Features:</h4>
+                        <ul>
+                            <li>Basic operations: +, -, ×, ÷</li>
+                            <li>Decimal and percentage calculations</li>
+                            <li>Clear (C) and All Clear (AC) buttons</li>
+                            <li>Error handling for division by zero</li>
+                            <li>Fully responsive design</li>
+                            <li>Square root functionality</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="project-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">Responsive Design</span>
+                    </div>
+                    <a href="https://calculator-challenge-one.vercel.app/" target="_blank" class="link-arrow">View The Website →</a>
+                </div>
+
+                <!-- What Are You Wearing -->
+                <div class="project-card" onclick="window.open('https://what-are-you-wearing.vercel.app/', '_blank')">
+                    <img src="../../Images/Screenshot 2025-12-25 024440.png" alt="What Are You Wearing Demo" class="project-image">
+                    <h3>What Are You Wearing?</h3>
+                    <p class="project-tagline">🏆 Hackathon Winner - Code for Justice · July 2025</p>
+                    <p>An award-winning website for fast4ward, a fictional non-profit raising awareness about fast fashion's hidden costs. Through clean design and impactful storytelling, we educated visitors on the social and environmental consequences of clothing production.</p>
+                    
+                    <div class="project-features">
+                        <h4>Features:</h4>
+                        <ul>
+                            <li>Impactful storytelling through clean design</li>
+                            <li>Educational content on fast fashion consequences</li>
+                            <li>BEM (Block Element Modifier) methodology</li>
+                            <li>Fully responsive across all devices</li>
+                            <li>Social and environmental impact visualization</li>
+                            <li>Award-winning user experience</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="project-tags">
+                        <span class="tag">HTML/CSS</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">BEM</span>
+                        <span class="tag">Responsive Design</span>
+                    </div>
+                    <a href="https://what-are-you-wearing.vercel.app/" target="_blank" class="link-arrow">View The Website →</a>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="shared__footer">
+            <div class="footer-social">
+                <a href="https://github.com/MadisonDuran" target="_blank" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/madison-duran-60b679248/" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="mailto:madisonduran74@gmail.com" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+            <p class="footer-copyright">&copy; 2025 Madison Duran. All Rights Reserved.</p>
+        </footer>
+    </body>
+</html>
