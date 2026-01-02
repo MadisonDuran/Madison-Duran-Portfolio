@@ -3,6 +3,9 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+        <meta http-equiv="Pragma" content="no-cache">
+        <meta http-equiv="Expires" content="0">
         <title>Contact - Madison Duran</title>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -134,6 +137,17 @@
                     padding: 1.5rem;
                 }
             }
+
+            @keyframes fadeInScale {
+                0% {
+                    opacity: 0;
+                    transform: scale(0.9);
+                }
+                100% {
+                    opacity: 1;
+                    transform: scale(1);
+                }
+            }
         </style>
     </head>
     <body>
@@ -189,13 +203,6 @@
 
                         <button type="submit" class="btn">Send message</button>
                     </form>
-                    
-                    <!-- Thank You Message -->
-                    <div id="thank-you-message" style="display: none; text-align: center; padding: 2rem;">
-                        <h3 style="color: #8b7355; font-size: 1.75rem; margin-bottom: 1rem;">Thank You!</h3>
-                        <p style="color: #333; line-height: 1.8; font-size: 1.1rem;">Your message has been successfully sent. I'll get back to you as soon as possible!</p>
-                        <p style="color: #666; margin-top: 1rem;">✓ Message received</p>
-                    </div>
                 </div>
             </section>
         </main>
@@ -217,7 +224,7 @@
         </footer>
         
         <script>
-            function validate(event) {
+            async function validate(event) {
                 event.preventDefault();
                 
                 let isValid = true;
@@ -280,12 +287,48 @@
                     isValid = false;
                 }
                 
-                // If valid, show thank you message
+                // If valid, submit to backend
                 if (isValid) {
-                    document.getElementById('form').style.display = 'none';
-                    document.querySelector('h2').style.display = 'none';
-                    document.querySelector('.intro').style.display = 'none';
-                    document.getElementById('thank-you-message').style.display = 'block';
+                    try {
+                        // Use production URL if deployed, localhost for development
+                        const API_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
+                            ? 'http://localhost:3000/api/contact'
+                            : 'https://madison-duran-portfolio-production.up.railway.app/api/contact';
+                        
+                        const response = await fetch(API_URL, {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify({
+                                firstName: firstName.value.trim(),
+                                lastName: lastName.value.trim(),
+                                email: email.value.trim(),
+                                message: message.value.trim(),
+                                consent: consent.checked
+                            })
+                        });
+                        
+                        const data = await response.json();
+                        
+                        if (data.success) {
+                            // Show simple success alert
+                            alert('Thank you! Your message has been sent successfully.');
+                            
+                            // Reset form
+                            document.getElementById('form').reset();
+                            document.querySelectorAll('.contact-error').forEach(el => el.textContent = '');
+                            document.querySelectorAll('input, textarea').forEach(el => {
+                                el.classList.remove('input-valid', 'input-invalid');
+                            });
+                        } else {
+                            // Show error message
+                            alert('Error: ' + (data.message || 'Failed to submit form'));
+                        }
+                    } catch (error) {
+                        console.error('Submission error:', error);
+                        alert('Failed to submit form. Please make sure the server is running.');
+                    }
                 }
                 
                 return false;
